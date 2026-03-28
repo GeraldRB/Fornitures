@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chesterfield</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/Assets/Css/Details.css" />
+  <link rel="stylesheet" href="/Assets/Css/LivingRoomInedex.css" />
+
+  <meta property="og:title" content="Chesterfield">
+  <meta property="og:description" content="Sofá moderno de sala con diseño elegante y confortable.">
+
+  <!-- When I finish the domain -->
+  <meta property="og:image" content="https://tusitio.com/Media/Forniture/hamburgo.png">
+  <meta property="og:url" content="https://tusitio.com/producto/hamburgo">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="/views/index.html" style="text-decoration: none;" class="logo">MPG</a>
+
+    <nav class="nav-links">
+      <!-- <a href="#">Todos</a> -->
+     <a href="/views/LivingRoom/index.html">Sala</a>
+      <a href="/views/Butacas/index.html">Butacas</a>
+      <a href="/views/BeedRoom/index.html">Dormitorios</a>
+      <a href="/views/DiningRoom/index.html">Comedores</a>
+      <a href="/views/Closets/index.html">Armarios</a>
+    </nav>
+
+  </header>
+
+  <section class="product-detail-page">
+    <div class="product-detail-container">
+
+      <!-- GALERÍA -->
+      <div class="product-detail-gallery">
+        <div class="product-main-image">
+          <span class="product-badge">PIEZA DESTACADA</span>
+          <img src="/Media/Forniture/chesterfield.png" alt="Sillón de sala">
+        </div>
+
+        <!-- <div class="product-thumb-grid">
+          <div class="product-thumb">
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=900&auto=format&fit=crop"
+              alt="Vista lateral">
+          </div>
+
+          <div class="product-thumb">
+            <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?q=80&w=900&auto=format&fit=crop"
+              alt="Detalle del sillón">
+          </div>
+        </div> -->
+      </div>
+
+      <!-- INFO -->
+      <div class="product-detail-info">
+        <p class="product-breadcrumb">COLECCIÓN / SALA / SILLONES</p>
+
+        <h1 class="product-title">Chesterfield</h1>
+
+        <p class="product-price">₡355.000</p>
+
+        <div class="product-block">
+          <h4>Descripción</h4>
+          <p>
+            Un sillón de sala con líneas elegantes, estructura firme y un acabado
+            pensado para aportar calidez, confort y presencia al espacio.
+          </p>
+        </div>
+
+        <div class="product-block">
+          <h4>Medidas</h4>
+          <div class="product-measures">
+            <div>
+              <span>Ancho</span>
+              <strong>95 cm</strong>
+            </div>
+            <div>
+              <span>Alto</span>
+              <strong>88 cm</strong>
+            </div>
+            <div>
+              <!-- <span>Fondo</span>
+              <strong>90 cm</strong> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="product-block">
+          <h4>Detalles</h4>
+          <ul class="product-details-list">
+            <li>Tapizado de alta calidad</li>
+            <li>Estructura de madera sólida</li>
+            <li>Ideal para sala o recibidor</li>
+          </ul>
+        </div>
+
+        <a href="#" class="product-whatsapp-btn" onclick="enviarWhatsApp()">
+          Consultar por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    function enviarWhatsApp() {
+
+      // 🔹 Tomar datos del HTML automáticamente
+      const nombre = document.querySelector(".product-title").innerText;
+      const precio = document.querySelector(".product-price").innerText;
+
+      const numero = "50685729871";
+
+      const mensaje = `Hola, me interesa el mueble ${nombre}.
+Precio visto en la web: ${precio}.
+¿Podría brindarme más información?`;
+
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+
+</html>
