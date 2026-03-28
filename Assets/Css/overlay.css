@@ -1,0 +1,26 @@
+/* Overlay fullscreen blanco */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+/* Contenedor del SVG (opcional) */
+.overlay__content {
+  width: min(900px, 90vw);
+  height: auto;
+}
+
+/* Si quieres ocultarlo */
+.overlay.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
