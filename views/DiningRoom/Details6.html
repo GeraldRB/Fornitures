@@ -44,35 +44,34 @@
       <div class="product-detail-gallery">
         <div class="product-main-image">
           <!-- <span class="product-badge">PIEZA DESTACADA</span> -->
-          <img src="/Fornitures/Media/Closets/card1.png" id="mainImage" alt="Sillón de sala" onclick="changeImage(this)">
+          <img src="/Fornitures/Media/DiningRooms/card6.png" id="mainImage" alt="Sillón de sala"
+            onclick="changeImage(this)">
         </div>
 
         <div class="product-thumb-grid">
-          <!-- <div class="product-thumb">
-            <img src="/Fornitures/Media/Closets/card1.1.png"  onclick="changeImage(this)"
-              alt="Vista lateral">
-          </div> -->
+          <div class="product-thumb">
+            <img src="/Fornitures/Media/DiningRooms/card6.1.png" onclick="changeImage(this)" alt="Vista lateral">
+          </div>
 
-          <!-- <div class="product-thumb">
-            <img src="/Fornitures/Media/Closets/card1.png"  onclick="changeImage(this)"
-              alt="Detalle del sillón">
-          </div> -->
+          <div class="product-thumb">
+            <img src="/Fornitures/Media/DiningRooms/card6.png" onclick="changeImage(this)" alt="Detalle del sillón">
+          </div>
         </div>
       </div>
 
       <!-- INFO -->
       <div class="product-detail-info">
-        <p class="product-breadcrumb">COLECCIÓN / SALA / ARMARIOS</p>
+        <p class="product-breadcrumb">COLECCIÓN / SALA / SILLONES</p>
 
-        <h1 class="product-title">>Armario Imperial</h1>
+        <h1 class="product-title">Comedor Garden</h1>
 
-        <p class="product-price">₡400.000</p>
+        <p class="product-price">₡850.000</p>
 
         <div class="product-block">
           <h4>Descripción</h4>
           <p>
-            Un sillón de diseño elegante y contemporáneo, construido con una estructura firme y acabados de alta calidad,
-            pensado para aportar confort, calidez y un toque distintivo a tu sala.
+            Un sillón de sala con líneas elegantes, estructura firme y un acabado
+            pensado para aportar calidez, confort y presencia al espacio.
           </p>
         </div>
 
@@ -130,19 +129,19 @@ Precio visto en la web: ${precio}.
     }
 
 
-  function changeImage(element) {
-    const mainImage = document.getElementById("mainImage");
+    function changeImage(element) {
+      const mainImage = document.getElementById("mainImage");
 
-    mainImage.src = element.src;
+      mainImage.src = element.src;
 
-    // quitar activo
-    document.querySelectorAll(".product-thumb").forEach(t => {
-      t.classList.remove("active");
-    });
+      // quitar activo
+      document.querySelectorAll(".product-thumb").forEach(t => {
+        t.classList.remove("active");
+      });
 
-    // agregar activo
-    element.parentElement.classList.add("active");
-  }
+      // agregar activo
+      element.parentElement.classList.add("active");
+    }
   </script>
 </body>
 
