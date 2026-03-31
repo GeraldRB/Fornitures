@@ -1,7 +1,7 @@
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(1fr);
-  gap: 15;
+  grid-template-columns: 1fr;
+  gap: 15px;
   width: 100%;
   padding-bottom: 15px;
 }
@@ -21,6 +21,8 @@
 .featured-card img {
   height: 50vh;
   width: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .featured-card h1 {
@@ -64,7 +66,7 @@
   text-decoration: none;
   color: #111;
   border: none;
-  border-radius: 05px;
+  border-radius: 5px;
   padding: 12px 18px;
   font-size: 14px;
   display: inline-flex;
@@ -84,7 +86,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border-radius: 03px;
+  border-radius: 3px;
   width: 34px;
   height: 34px;
   background-color: #DA4B2C;
@@ -115,7 +117,6 @@
   transition: all 0.25s ease;
   flex: 0 0 auto;
   white-space: nowrap;
-
 }
 
 .card-style:hover {
@@ -142,15 +143,137 @@
   transform: scale(1.07);
 }
 
+/* Tablet */
+@media (max-width: 992px) {
+  .featured-products {
+    margin-top: 70px;
+  }
+
+  .featured-products h1 {
+    margin-left: 15px;
+    font-size: 32px;
+  }
+
+  .featured-products p {
+    margin-right: 15px;
+    font-size: 15px;
+    padding-top: 15px;
+  }
+
+  .featured-card {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 12px;
+  }
+
+  .featured-card img {
+    height: 40vh;
+  }
+
+  .featured-card h1 {
+    font-size: 1.15rem;
+  }
+
+  .featured-card p {
+    width: 100%;
+    font-size: 0.98rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 576px) {
+  .featured-products {
+    margin-top: 50px;
+  }
+
+  .featured-products h1 {
+    margin-left: 10px;
+    font-size: 26px;
+    -webkit-text-stroke: 0;
+  }
+
+  .featured-products p {
+    margin-right: 10px;
+    font-size: 14px;
+    padding-top: 10px;
+  }
+
+  .featured-grid {
+    gap: 12px;
+  }
+
+  .featured-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .featured-card img {
+    height: 32vh;
+  }
+
+  .featured-card h1 {
+    font-size: 1rem;
+    margin-top: 12px;
+  }
+
+  .featured-card p {
+    width: 100%;
+    font-size: 0.92rem;
+  }
+
   .featured-cards {
-    margin: 10px;
+    margin: 10px 0;
     width: 100%;
     gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 5px;
   }
 
   .card-style {
-    flex: 1 1 calc(100% - 10px);
-    justify-content: center;
+    flex: 0 0 auto;
+    font-size: 12px;
+    padding: 9px 12px;
   }
+
+  .collections-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 13px;
+    padding: 11px 14px;
+    gap: 10px;
+  }
+
+  .btn-span {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .featured-products {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .featured-products h1,
+  .featured-products p {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 50px;
+  }
+
+  .featured-cards {
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+  }
+
 }
