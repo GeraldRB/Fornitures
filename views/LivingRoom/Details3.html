@@ -44,18 +44,17 @@
       <div class="product-detail-gallery">
         <div class="product-main-image">
           <!-- <span class="product-badge">PIEZA DESTACADA</span> -->
-          <img src="/Fornitures/Media/Forniture/card3.webp" id="mainImage" alt="Sillón de sala" onclick="changeImage(this)">
+          <img src="/Fornitures/Media/Forniture/card3.webp" id="mainImage" alt="Sillón de sala"
+            onclick="changeImage(this)">
         </div>
 
         <div class="product-thumb-grid">
           <div class="product-thumb">
-            <img src="/Fornitures/Media/Forniture/card3.webp"  onclick="changeImage(this)"
-              alt="Vista lateral">
+            <img src="/Fornitures/Media/Forniture/card3.webp" onclick="changeImage(this)" alt="Vista lateral">
           </div>
 
           <div class="product-thumb">
-            <img src="/Fornitures/Media/Forniture/card3.1.webp"  onclick="changeImage(this)"
-              alt="Detalle del sillón">
+            <img src="/Fornitures/Media/Forniture/card3.1.webp" onclick="changeImage(this)" alt="Detalle del sillón">
           </div>
         </div>
       </div>
@@ -103,7 +102,7 @@
           </ul>
         </div>
 
-        <a href="#" class="product-whatsapp-btn" onclick="enviarWhatsApp()">
+        <a href="#" class="product-whatsapp-btn">
           Consultar por WhatsApp
         </a>
       </div>
@@ -111,39 +110,7 @@
     </div>
   </section>
 
-  <script>
-    function enviarWhatsApp() {
-
-      // 🔹 Tomar datos del HTML automáticamente
-      const nombre = document.querySelector(".product-title").innerText;
-      const precio = document.querySelector(".product-price").innerText;
-
-      const numero = "50697976656";
-
-      const mensaje = `Hola, me interesa el mueble ${nombre}.
-Precio visto en la web: ${precio}.
-¿Podría brindarme más información?`;
-
-      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-
-      window.open(url, "_blank");
-    }
-
-
-  function changeImage(element) {
-    const mainImage = document.getElementById("mainImage");
-
-    mainImage.src = element.src;
-
-    // quitar activo
-    document.querySelectorAll(".product-thumb").forEach(t => {
-      t.classList.remove("active");
-    });
-
-    // agregar activo
-    element.parentElement.classList.add("active");
-  }
-  </script>
+  <script type="module" src="/Fornitures/Assets/JS/sendMessage.js"></script>
 </body>
 
 </html>
