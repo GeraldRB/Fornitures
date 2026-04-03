@@ -2,7 +2,8 @@
   position: relative;
   width: 100%;
   height: auto;
-  background: url('/Fornitures//Media/Forniture/Footer.webp') center/cover no-repeat;
+  background: url('Media/Forniture/Footer.webp') center/cover no-repeat;
+
   font-family: "Montserrat", sans-serif;
   color: white;
 }
